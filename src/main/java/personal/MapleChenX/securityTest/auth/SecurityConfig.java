@@ -62,7 +62,7 @@ public class SecurityConfig {
                 // Spring Security会在每个请求开始时创建一个新的SecurityContext，并在请求结束时清除这个SecurityContext。
                 .sessionManagement(conf -> conf
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class) // JWT验证
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 

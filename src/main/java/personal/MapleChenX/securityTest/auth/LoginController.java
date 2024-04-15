@@ -31,7 +31,7 @@ public class LoginController {
     JwtUtils jwtUtils;
 
 
-    @PostMapping("/login")
+    @RequestMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginReq user) {
 
         UserDTO one = userService.query().eq("username", user.getUsername()).one();
